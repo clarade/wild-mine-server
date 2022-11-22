@@ -1,0 +1,6 @@
+node_modules
+build
+.env
+DockerfileDev
+images/Image d’iOS.jpg
+IMG_7630.JPG

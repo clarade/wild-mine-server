@@ -1,0 +1,52 @@
+{
+	"name": "server",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"lint": "eslint src",
+		"test": "jest",
+		"test:watch": "jest --watch",
+		"build": "tsc",
+		"build:watch": "tsc -w",
+		"start": "node build/.",
+		"start:watch": "npm run build && (npm run build:watch & nodemon --inspect build/.)"
+	},
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"@types/graphql": "^14.5.0",
+		"apollo-server": "^3.6.3",
+		"apollo-server-express": "^3.6.3",
+		"class-validator": "^0.13.1",
+		"cookie-parser": "^1.4.6",
+		"dotenv": "^10.0.0",
+		"express": "^4.17.3",
+		"graphql": "^15.8.0",
+		"graphql-upload": "^13.0.0",
+		"md5": "^2.3.0",
+		"pg": "^8.7.3",
+		"reflect-metadata": "^0.1.13",
+		"type-graphql": "^1.1.1",
+		"typeorm": "^0.2.43",
+		"typescript": "^4.6.3",
+		"uid-safe": "^2.1.5"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.17.5",
+		"@babel/plugin-proposal-decorators": "^7.17.2",
+		"@babel/preset-env": "^7.16.4",
+		"@babel/preset-typescript": "^7.16.0",
+		"@types/cookie-parser": "^1.4.2",
+		"@types/express": "^4.17.13",
+		"@types/graphql-upload": "^8.0.11",
+		"@types/jest": "^27.0.3",
+		"@types/md5": "^2.3.2",
+		"@types/node": "^17.0.19",
+		"@types/uid-safe": "^2.1.2",
+		"babel-jest": "^27.5.1",
+		"babel-plugin-transform-typescript-metadata": "^0.3.2",
+		"jest": "^27.5.1",
+		"nodemon": "^2.0.15"
+	}
+}
