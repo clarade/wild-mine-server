@@ -10,6 +10,7 @@
 		"build": "tsc",
 		"build:watch": "tsc -w",
 		"start": "node build/.",
+		"dev": "ts-node-dev src/index.ts",
 		"start:watch": "npm run build && (npm run build:watch & nodemon --inspect build/.)"
 	},
 	"author": "",
@@ -20,6 +21,7 @@
 		"apollo-server-express": "^3.6.3",
 		"class-validator": "^0.13.1",
 		"cookie-parser": "^1.4.6",
+		"cors": "^2.8.5",
 		"dotenv": "^10.0.0",
 		"express": "^4.17.3",
 		"graphql": "^15.8.0",

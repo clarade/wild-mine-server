@@ -3,11 +3,12 @@ import 'reflect-metadata';
 import express from 'express';
 import cookieParser from 'cookie-parser';
 import { graphqlUploadExpress } from 'graphql-upload';
-
 import getServer from './apollo-server';
 import getDatabaseConnection from './database-connection';
 import UID from 'uid-safe';
 import indexRouter from './routes';
+import cors from 'cors';
+import { corsOptions } from './config/corsOptions';
 
 dotenv.config();
 
@@ -20,6 +21,8 @@ const runServer = async () => {
 	console.log('Connected to database');
 
 	const app = express();
+
+	app.use(cors(corsOptions));
 
 	app.use(cookieParser());
 
